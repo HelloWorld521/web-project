@@ -19,12 +19,18 @@
 	<script type="text/javascript">
 		window.onload=function(){
 			showTime();
+			var now=new Date();
+			var end=new Date("2018,6,6");
+			var left=Math.ceil((end.getTime()-now.getTime())/(24*60*60*1000));
+			var sh=document.getElementById("show1");
+			sh.innerHTML=left;
 		}
 	</script>
 	<body>
 		<div>
 		显示当前时间：
-		<span id="show"></span>
+		<span id="show"></span><br>
+		距高考还有<span id="show1"></span>天！
 		</div>
 	</body>
 </html>

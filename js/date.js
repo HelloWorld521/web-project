@@ -18,4 +18,5 @@ function chickTime (i) {
 				i='0'+i;
 			}
 			return i;
-		}		
+		}
+
