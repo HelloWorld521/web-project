@@ -19,22 +19,14 @@
 	<script type="text/javascript">
 		window.onload=function(){
 			showTime();
-			var now=new Date();
-		//	var end=new Date("2018,6,6"); //ie不兼容
-			var end=new Date();
-				end.setFullYear(2018);
-				end.setMonth(5);
-				end.setDate(6); 
-			var left=Math.ceil((end.getTime()-now.getTime())/(24*60*60*1000));
-			var sh=document.getElementById("show1");
-			sh.innerHTML=left;
+			FreshTime();
 		}
 	</script>
 	<body>
 		<div>
 		显示当前时间：
 		<span id="show"></span><br>
-		距高考还有<span id="show1"></span>天！
+		距高考还有<span id="show1"></span>！
 		</div>
 	</body>
 </html>
