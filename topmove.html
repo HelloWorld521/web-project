@@ -67,9 +67,6 @@
 				overflow: hidden;
 				width: 180px;
 			}
-			#moocbox ul li a:hover{
-				color:red;
-			}
 			#mooc span{
 				color:#999;
 				float: right;
@@ -118,20 +115,14 @@
 					box.scrollTop=0;
 				}
 			}
-			box.onmouseover=function(){
-				clearInterval(time);
-			}
-			box.onmouseout=function(){
-				time=setInterval(scrollUp,speed);
-			}
 		}
 		setTimeout(startMove,delay);
-//		box.onmouseover=function(){
-//			clearInterval();
-//		}
-//		box.onmouseout=function(){
-//			startMove();
-//		}	
+		box.onmouseover=function(){
+			clearInterval(time);
+		}
+		box.onmouseout=function(){
+			startMove();
+		}	
 		</script>
 	</body>
 </html>
