@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>文字的无缝滚动</title>
@@ -97,35 +96,19 @@
 			</div>
 		</div>	
 		<script type="text/javascript">
-		//去鼠标值
-		
-		//动画
 		var box = document.getElementById("moocbox");
 		var con=document.getElementById("con");
-		con.innerHTML+=con.innerHTML; //clone
+		con.innerHTML+=con.innerHTML;
 		box.scrollTop=0;
 		var liHeight=24;//li的高度
 		var speed=50;
 		var delay=1000;
-		console.log(box.offsetLeft);
 		function startMove(){
 			box.scrollTop++;
-			time=setInterval('scrollUp(event)',speed);
+//			console.log(box.scrollTop);
+			time=setInterval(scrollUp,speed);
 		}
-		function scrollUp (event) {
-			var e = event||window.event;
-			var x=e.clientX;
-			var y=e.clientY;
-			if(x>box.offsetLeft&&x<(box.offsetleft+box.style.width)&&y>box.offsetTop&&y<(box.offsetTop+box.style.height)){
-				clearInterval(time);
-				if(box.onmouseout){
-					move();
-				}
-			}else{
-				move();
-			}
-		}
-		function move(){
+		function scrollUp () {			
 			if(box.scrollTop%liHeight==0){
 				clearInterval(time);
 				setTimeout(startMove,delay);
@@ -135,14 +118,20 @@
 					box.scrollTop=0;
 				}
 			}
+			box.onmouseover=function(){
+				clearInterval(time);
+			}
+			box.onmouseout=function(){
+				time=setInterval(scrollUp,speed);
+			}
 		}
+		setTimeout(startMove,delay);
 //		box.onmouseover=function(){
-//					clearInterval(time);
-//				}
-//				box.onmouseout=function(){
-//					time=setInterval(scrollUp,speed);
-//				}
-		setTimeout(startMove,delay);	
+//			clearInterval();
+//		}
+//		box.onmouseout=function(){
+//			startMove();
+//		}	
 		</script>
 	</body>
 </html>
