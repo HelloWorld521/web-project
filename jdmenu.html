@@ -8,6 +8,7 @@
 				margin: 0;
 				padding: 0;
 			}
+			/*顶部*/
 			.topmenu{
 				display: block;
 				width: 212px;
@@ -25,6 +26,8 @@
 				color: white;
 				padding-left: 10px;
 			}
+			
+			/*li*/
 			.topmenu li{
 				display: block;
 				height: 30px;
@@ -34,7 +37,7 @@
 				background-color:#c81623;		
 				padding-left: 8px ;
 			}
-			.topmenu li:hover{
+			.topmenu .lihover{
 				background-color:#F7F7F7;
 				color:red;
 				border-right: 0;
@@ -47,13 +50,18 @@
 				height: 29px;	
 				float: left;				
 			}
-			.topmenu li:hover a{
+			/*.topmenu li a:hover{
+				color: #B61D1D;
+			}*/
+			.topmenu .lihover #a1{ 
 				color: #B61D1D;
 			}
-			.topmenu li:hover span{
+			
+			.topmenu .lihover span{
 				display: none;
 			}
-			.topmenu li:hover i{
+			/*白色小方框*/
+			.topmenu .lihover i{
 				background: #F7F7F7;
 				display: inline-block;
 				z-index: 10;
@@ -69,9 +77,11 @@
 				font:400 9px consolas;
 				z-index: ;
 			}
-			.topmenu li:hover .submenu{
+			.topmenu .lihover .submenu{
 				display: block;	
 			}
+			
+			/*悬浮层*/
 			.submenu{
 				display: none;
 				widows: 1000px;
@@ -82,39 +92,1031 @@
 				border: 1px solid #B61D1D;
 				background: #F7F7F7;
 			}
+			.submenu dl a:hover{
+				color: #B61D1D;
+			}
 			.leftdiv{
-				background: gray;
 				float: left;
 				width: 750px;
 				margin: 5px;
 			}
 			.rightdiv{
-				background: blue;
 				float: right;
 				width: 250px;
 				margin: 5px;
 			}
+			.leftdiv dl{
+				display: block;
+				border-bottom: 1px solid #E0E0E0;
+				padding-bottom: 6px;
+				overflow: hidden;
+			}
+			.leftdiv dl dt{
+				width: 105px;
+				display: block;
+				float: left;
+				text-align: right;
+				height: 20px;
+				line-height: 20px;
+				overflow: hidden;
+			}
+			.leftdiv dl dt a{
+				width: 85px;
+				color: #666666;
+				font-size: 10pt;
+				font-weight: bold;
+			}
+			.leftdiv dl dd{
+				display: block;
+				overflow: hidden;
+			}
+			.leftdiv dl dd a{
+				width: auto;
+				display: block;
+				float: left;
+				border-left: 1px solid #E0E0E0;
+				color: #666666;
+				padding: 0 8px;
+				height: 14px;
+				line-height: 14px;
+				margin: 3px 0;
+				font-size: 9pt;
+			}
+			.rightdiv dl dd a{
+				color:#666666;
+			}
 		</style>
 	</head>
 	<body>
+		<script type="text/javascript">
+			window.onload=function () {
+					var Lis=document.getElementsByTagName('li');
+					for (i=0;i<Lis.length;i++) {
+						Lis[i].onmouseover=function(){
+							this.className="lihover";
+						}
+						Lis[i].onmouseout=function(){
+							this.className="";
+						}
+					}
+			}
+		</script>
 		<ul class="topmenu">
 			<div class="toptitle">
 				全部商品分类
 			</div>
-			<li><a href="#">图书、音像、数码产品<span>></span></a><i></i>
+			<li><a href="#" id="a1">图书、音像、数码产品<span>></span></a>
+				<i></i>
 				<div class="submenu">
-					<div class="leftdiv">二级分类<br />二级分类<br />二级分类<br />二级分类<br />二级分类<br />				
+					<div class="leftdiv">
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
 					</div>
-					<div class="rightdiv">右侧推荐品牌</div>
+					<div class="rightdiv">
+						<dl>
+							<dd><img src="img/itme1_1.jpg"/><img src="img/itme1_2.jpg"/></dd>
+							<dd><img src="img/itme1_3.jpg"/></dd>
+						</dl>
+						<dl>
+							<dt>推荐品牌</dt>
+							<dd><a href="#">美的官方旗舰店</a></dd>
+							<dd><a href="#">苏泊尔旗舰店</a></dd>
+							<dd><a href="#">九阳旗舰店</a></dd>
+							<dd><a href="#">小熊旗舰店</a></dd>
+						</dl>
+					</div>
 				</div>
 			</li>
-			<li><a href="#">家用电器<span>></span></a></li>
-			<li><a href="#">电脑、办公<span>></span></a></li>
-			<li><a href="#">家具、厨具<span>></span></a></li>
-			<li><a href="#">服饰内衣<span>></span></a></li>
-			<li><a href="#">个性化妆<span>></span></a></li>
-			<li><a href="#">鞋靴、箱包<span>></span></a></li>
-			<li><a href="#">汽车用品<span>></span></a></li>
+			<li><a href="#" id="a1">家用电器<span>></span></a>
+				<i></i>
+				<div class="submenu">
+					<div class="leftdiv">
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家用电器</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="rightdiv">
+						<dl>
+							<dd><img src="img/itme1_1.jpg"/><img src="img/itme1_2.jpg"/></dd>
+							<dd><img src="img/itme1_3.jpg"/></dd>
+						</dl>
+						<dl>
+							<dt>推荐品牌</dt>
+							<dd><a href="#">美的官方旗舰店</a></dd>
+							<dd><a href="#">苏泊尔旗舰店</a></dd>
+							<dd><a href="#">九阳旗舰店</a></dd>
+							<dd><a href="#">小熊旗舰店</a></dd>
+						</dl>
+					</div>
+				</div>
+			</li>
+			<li><a href="#" id="a1">电脑、办公<span>></span></a>
+				<i></i>
+				<div class="submenu">
+					<div class="leftdiv">
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="rightdiv">
+						<dl>
+							<dd><img src="img/itme1_1.jpg"/><img src="img/itme1_2.jpg"/></dd>
+							<dd><img src="img/itme1_3.jpg"/></dd>
+						</dl>
+						<dl>
+							<dt>推荐品牌</dt>
+							<dd><a href="#">美的官方旗舰店</a></dd>
+							<dd><a href="#">苏泊尔旗舰店</a></dd>
+							<dd><a href="#">九阳旗舰店</a></dd>
+							<dd><a href="#">小熊旗舰店</a></dd>
+						</dl>
+					</div>
+				</div>
+			</li>
+			<li><a href="#" id="a1">家具、厨具<span>></span></a>
+				<i></i>
+				<div class="submenu">
+					<div class="leftdiv">
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">家具、厨具</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="rightdiv">
+						<dl>
+							<dd><img src="img/itme1_1.jpg"/><img src="img/itme1_2.jpg"/></dd>
+							<dd><img src="img/itme1_3.jpg"/></dd>
+						</dl>
+						<dl>
+							<dt>推荐品牌</dt>
+							<dd><a href="#">美的官方旗舰店</a></dd>
+							<dd><a href="#">苏泊尔旗舰店</a></dd>
+							<dd><a href="#">九阳旗舰店</a></dd>
+							<dd><a href="#">小熊旗舰店</a></dd>
+						</dl>
+					</div>
+				</div>
+			</li>
+			<li><a href="#" id="a1">服饰内衣<span>></span></a>
+				<i></i>
+				<div class="submenu">
+					<div class="leftdiv">
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="rightdiv">
+						<dl>
+							<dd><img src="img/itme1_1.jpg"/><img src="img/itme1_2.jpg"/></dd>
+							<dd><img src="img/itme1_3.jpg"/></dd>
+						</dl>
+						<dl>
+							<dt>推荐品牌</dt>
+							<dd><a href="#">美的官方旗舰店</a></dd>
+							<dd><a href="#">苏泊尔旗舰店</a></dd>
+							<dd><a href="#">九阳旗舰店</a></dd>
+							<dd><a href="#">小熊旗舰店</a></dd>
+						</dl>
+					</div>
+				</div>
+			</li>
+			<li><a href="#" id="a1">个性化妆<span>></span></a>
+				<i></i>
+				<div class="submenu">
+					<div class="leftdiv">
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">个性化妆</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="rightdiv">
+						<dl>
+							<dd><img src="img/itme1_1.jpg"/><img src="img/itme1_2.jpg"/></dd>
+							<dd><img src="img/itme1_3.jpg"/></dd>
+						</dl>
+						<dl>
+							<dt>推荐品牌</dt>
+							<dd><a href="#">美的官方旗舰店</a></dd>
+							<dd><a href="#">苏泊尔旗舰店</a></dd>
+							<dd><a href="#">九阳旗舰店</a></dd>
+							<dd><a href="#">小熊旗舰店</a></dd>
+						</dl>
+					</div>
+				</div>
+			</li>
+			<li><a href="#" id="a1">鞋靴、箱包<span>></span></a>
+				<i></i>
+				<div class="submenu">
+					<div class="leftdiv">
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="rightdiv">
+						<dl>
+							<dd><img src="img/itme1_1.jpg"/><img src="img/itme1_2.jpg"/></dd>
+							<dd><img src="img/itme1_3.jpg"/></dd>
+						</dl>
+						<dl>
+							<dt>推荐品牌</dt>
+							<dd><a href="#">美的官方旗舰店</a></dd>
+							<dd><a href="#">苏泊尔旗舰店</a></dd>
+							<dd><a href="#">九阳旗舰店</a></dd>
+							<dd><a href="#">小熊旗舰店</a></dd>
+						</dl>
+					</div>
+				</div>
+			</li>
+			<li><a href="#" id="a1">汽车用品<span>></span></a>
+				<i></i>
+				<div class="submenu">
+					<div class="leftdiv">
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#">电子书</a></dt>
+							<dd>
+								<a href="">免费</a>
+								<a href="">小说</a>
+								<a href="">励志与成功</a>
+								<a href="">文学</a>
+								<a href="">经管</a>
+								<a href="">畅读VIP</a>
+							</dd>
+						</dl>
+					</div>
+					<div class="rightdiv">
+						<dl>
+							<dd><img src="img/itme1_1.jpg"/><img src="img/itme1_2.jpg"/></dd>
+							<dd><img src="img/itme1_3.jpg"/></dd>
+						</dl>
+						<dl>
+							<dt>推荐品牌</dt>
+							<dd><a href="#">美的官方旗舰店</a></dd>
+							<dd><a href="#">苏泊尔旗舰店</a></dd>
+							<dd><a href="#">九阳旗舰店</a></dd>
+							<dd><a href="#">小熊旗舰店</a></dd>
+						</dl>
+					</div>
+				</div>
+			</li>
 		</ul>
 	</body>
 </html>
