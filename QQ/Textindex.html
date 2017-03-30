@@ -1,0 +1,64 @@
+<!DOCTYPE html>	
+<html>
+	 <!--Alt是跳转，Shift是转义，Ctrl是操作。-->
+	<head>
+		<title>分享运动</title>
+		<meta charset="utf-8"/>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#div1{
+			width:200px;
+			height: 300px;
+			background: royalblue;
+			left: -200px;
+			top:50px;
+			position: relative;
+		}
+		#div1 span{
+			width: 20px;
+			height: 50px;
+			background:red;
+			left: 200px;
+			top: 50px;
+			position: absolute;
+		}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oDiv=document.getElementById("div1");
+				oDiv.onmouseover=function() {
+					starMove(0);
+				}
+				oDiv.onmouseout=function(){
+					starMove(-200);
+				}
+			}
+			var timer=null;
+			function starMove (iTarget) {
+				clearInterval(timer);
+				var oDiv=document.getElementById("div1");
+				timer = setInterval(function() {
+					var speed=(iTarget-oDiv.offsetLeft)/10;
+					speed=speed>0?Math.ceil(speed):Math.floor(speed);
+					//offsetleft当前值
+					if (oDiv.offsetLeft==iTarget) {
+						clearInterval(timer);
+					}else{
+						//Math.floor 向下取整！
+						//Math.ceil向上取整！
+					oDiv.style.left=oDiv.offsetLeft+speed+'px';
+					}
+				},30)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<span id="share">分享</span>
+		</div>
+		
+	</body>
+</html>

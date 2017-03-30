@@ -10,7 +10,7 @@ function showTime () {
 			var sen=myDate.getSeconds();
 			var m=chickTime(min);
 			var s=chickTime(sen);
-			dd.innerHTML=year+'年'+month+'月'+date+'日&nbsp'+week[myDate.getDate()]+h+':'+m+':'+s;
+			dd.innerHTML=year+'年'+month+'月'+date+'日&nbsp'+week[myDate.getDay()]+h+':'+m+':'+s;
 			setTimeout(showTime,500);
 		}
 function chickTime (i) {

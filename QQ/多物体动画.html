@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>多物体动画</title>
+		<style type="text/css">
+			ul li{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				margin-bottom: 20px;
+				list-style: none;
+				opacity: 0.5;
+				border:3px solid blue;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var aLi=document.getElementsByTagName('li');
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].timer=null;
+					aLi[i].onmouseover=function() {
+						starMove(this,'width',200);
+					}
+					aLi[i].onmouseout=function(){
+						starMove(this,'width',100);
+					}
+				}
+			}
+			function starMove (obj,attr,iTarget) {
+				clearInterval(obj.timer);
+				obj.timer=setInterval(function(){ 
+					var sty=parseInt(getStyle(obj,attr));
+					var speed=(iTarget-sty)/8;
+					speed=speed>0?Math.ceil(speed):Math.floor(speed);
+					if(sty==iTarget){
+						clearInterval(obj.timer);
+					}else{
+						obj.style[attr]=sty+speed+'px';
+					}
+				},30)
+			}
+			//取样式函数
+			function getStyle (obj,attr) {
+				if(obj.currentStyle){
+				return obj.currentStyle[attr];//Ie支持
+			}else{
+				return getComputedStyle(obj,false)[attr];//
+			}
+			}
+		</script>
+	</head>
+	<body>
+	<ul>
+		<li>hah</li>
+		<li>hah</li>
+		<li>hha</li>
+	</ul>
+	</body>
+</html>
